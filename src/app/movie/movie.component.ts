@@ -4,17 +4,17 @@ import { MovieService } from './movie.service';
 
 @Component({
   selector: 'app-movie',
+  styleUrls: ['./movie.component.scss'],
   templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.scss']
 })
 export class MovieComponent implements OnInit {
-  public movies: any[] = [];
+  public data: any[] = [];
 
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
     this.movieService.getJSON().subscribe(data => {
-      this.movies = data;
+      this.data = data;
     });
   }
 }
