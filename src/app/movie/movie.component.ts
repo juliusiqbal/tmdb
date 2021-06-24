@@ -33,20 +33,20 @@ export class MovieComponent implements OnInit {
 
   public columns: object[] = [
     { data: 'budget' },
-    { data: 'genres' },
+    { data: 'genres', renderer: this.renderer },
     { data: 'homepage' },
     { data: 'id' },
-    { data: 'keywords' },
+    { data: 'keywords', renderer: this.renderer },
     { data: 'original_language' },
     { data: 'original_title' },
     { data: 'overview' },
     { data: 'popularity' },
-    { data: 'production_companies' },
-    { data: 'production_countries' },
+    { data: 'production_companies', renderer: this.renderer },
+    { data: 'production_countries', renderer: this.renderer },
     { data: 'release_date' },
     { data: 'revenue' },
     { data: 'runtime' },
-    { data: 'spoken_languages' },
+    { data: 'spoken_languages', renderer: this.renderer },
     { data: 'status' },
     { data: 'tagline' },
     { data: 'title' },
@@ -85,5 +85,18 @@ export class MovieComponent implements OnInit {
     this.movieService.getJSON().subscribe(data => {
       this.data = data;
     });
+  }
+
+  renderer(
+    _instance: any,
+    td: any,
+    _row: any,
+    _col: any,
+    _prop: any,
+    value: any,
+    _cellProperties: any,
+  ) {
+    td.innerHTML = JSON.stringify(value);
+    return td;
   }
 }
