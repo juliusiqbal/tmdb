@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "build": "ng build",
-    "heroku-postbuild": "ng build",
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",
     "watch": "ng build --watch --configuration development"
   },
   "dependencies": {
+    "@angular-devkit/build-angular": "~12.0.5",
     "@angular/animations": "~12.0.5",
     "@angular/cli": "~12.0.5",
     "@angular/common": "~12.0.5",
@@ -29,7 +29,6 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.0.5",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.7.0",
