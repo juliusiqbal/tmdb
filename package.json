@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "node --optimize_for_size --max_old_space_size=512 --gc_interval=100 node_modules/.bin/ng build",
+    "build": "node --optimize_for_size --max_old_space_size=640 --gc_interval=100 node_modules/.bin/ng build",
     "ng": "ng",
-    "start": "node --optimize_for_size --max_old_space_size=512 --gc_interval=100 node_modules/.bin/ng serve",
+    "start": "node --optimize_for_size --max_old_space_size=640 --gc_interval=100 node_modules/.bin/ng serve",
     "test": "ng test",
     "watch": "ng build --watch --configuration development"
   },
